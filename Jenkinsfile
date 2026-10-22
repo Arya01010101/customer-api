@@ -57,11 +57,13 @@ pipeline {
                         echo 'QA deployment started.'
                     } else if (targetEnvironment == 'prod') {
                         echo 'Production deployment requires approval.'
+                        echo ' please give the approval'
                     } else {
                         error("Invalid environment: ${targetEnvironment}")
                     }
 
                     echo 'Note: Deployment is simulated; no application was deployed.'
+
                 }
             }
         }
